@@ -1,0 +1,13 @@
+[Unit]
+Description=Umbrel scripts
+After=network.service NetworkManager-wait-online.service mnt-umbrel.mount docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/umbrel/scripts/start
+RemainAfterExit=true
+ExecStop=/opt/umbrel/scripts/stop
+TimeoutStopSec=60
+
+[Install]
+WantedBy=default.target
