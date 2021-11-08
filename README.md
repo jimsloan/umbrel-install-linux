@@ -12,10 +12,14 @@ __Remember that this is not recommended as it's experimental at the moment.__
 * Uninstall will only remove services and the /opt/umbrel folder
 * Persistent data is put in /var/umbrel
 
-### Instructions
+### Install Umbrel
 
 * clone this project
 * run umbrel-install.sh
+
+```bash
+$ ./umbrel-install.sh
+```
 
 ### To persist the bitcoin data
 
@@ -26,22 +30,32 @@ __Remember that this is not recommended as it's experimental at the moment.__
 ```yaml
 
 volumes:
-    - /var/umbrel/bitcoin:/data/.bitcoin`
+    - /var/umbrel/bitcoin:/data/bitcoin`
 ```
 
 * change electrs volumes  
 
 ```yaml
 volumes:
-    - /var/umbrel/bitcoin:/data/.bitcoin:ro
+    - /var/umbrel/bitcoin:/data/bitcoin:ro
 ```
 
 ### Start Umbrel
+
 ```bash
 $ sudo systemctl start umbrel.service
 ```
 
 ### Stop Umbrel
+
 ```bash
 $ sudo systemctl stop umbrel.service
 ```
+
+### Uninstall Umbrel
+
+```bash
+$ ./umbrel-uninstall.sh
+```
+
+
