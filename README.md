@@ -59,3 +59,27 @@ $ ./umbrel-uninstall.sh
 ```
 
 
+## Tips
+
+### Monitor the docker containers
+
+```bash
+$ sudo docker ps
+```
+
+### Tail the Bitcoin logs
+
+```bash
+cd /opt/umbrel
+$ docker-compose logs --tail=50 bitcoin
+```
+
+
+### Bitcoin commands
+
+```bash
+$ sudo docker exec bitcoin bitcoin-cli -getinfo
+```
+```bash
+$ sudo docker exec bitcoin bitcoin-cli getblockchaininfo
+```
