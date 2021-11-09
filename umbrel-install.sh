@@ -21,7 +21,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Install Umbrel
 sudo mkdir /opt/umbrel
 sudo chown $USER:$USER /opt/umbrel
-curl -L https://github.com/getumbrel/umbrel/archive/v0.3.5.tar.gz | tar -xz --strip-components=1 -C /opt/umbrel
+curl -L https://github.com/getumbrel/umbrel/archive/v0.4.6.tar.gz | tar -xz --strip-components=1 -C /opt/umbrel
+
 
 # Install Umbrel service
 sudo cp umbrel.service /etc/systemd/system/umbrel.service
